@@ -10,4 +10,6 @@ C:\Dev\sts-workspace\aws-java-membership-api>git remote -v
 origin  https://github.com/Eckhardo/aws-java-membership-api.git (fetch)
 origin  https://github.com/Eckhardo/aws-java-membership-api.git (push)
 
+
+8. git fetch && git  branch --set-upstream-to origin/master master
 9. git push
