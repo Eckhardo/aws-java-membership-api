@@ -1,0 +1,27 @@
+######Setup a new Serverless Project for Java ######################
+
+1.) DOS console
+	serverless create --template aws-java-maven --name membership-aws-serverless-api -p aws-java-membership-api
+2.) import as existing mvn artifact
+3.) mvn clean install
+4.) sls invoke local -f hello
+	Error:
+	Building Java bridge, first invocation might take a bit longer.
+	C:\Users\eckha\AppData\Roaming\npm\node_modules\serverless\lib\plugins\aws\invokeLocal\runtimeWrappers\java>
+
+	--> mvn clean install
+	
+5.) PLUGINS: 
+	-serverless plugin install --name serverless-offline	
+	-serverless plugin install --name serverless-dynamodb-local
+6.) LOCAL DynamoDB:
+ sls dynamodb install	
+7.) start dynamodb (DOS console) :
+sls dynamodb start -s dev
+
+
+
+SLS_DEBUG=* IS_OFFLINE=true
+SET SLS_DEBUG=true
+
+serverless offline start --printOutput --noAuth

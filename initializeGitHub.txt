@@ -1,0 +1,13 @@
+1. git init
+2. git checkout -b master
+3. git add .
+4. git commit -am "First Commit"
+5. create new repository in GitHub
+6. Copy https://github.com/Eckhardo/aws-java-membership-api.git
+7. git remote  add origin https://github.com/Eckhardo/aws-java-membership-api.git
+8. git remote -v 
+C:\Dev\sts-workspace\aws-java-membership-api>git remote -v
+origin  https://github.com/Eckhardo/aws-java-membership-api.git (fetch)
+origin  https://github.com/Eckhardo/aws-java-membership-api.git (push)
+
+9. git push

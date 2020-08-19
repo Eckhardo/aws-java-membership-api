@@ -1,0 +1,56 @@
+Resources:
+  CountryTable:
+    Type: AWS::DynamoDB::Table
+    DeletionPolicy: Retain
+    Properties:
+      TableName: ${self:custom.tableNames.users}
+      AttributeDefinitions:
+        - AttributeName: PK
+          AttributeType: S
+        - AttributeName: SK
+          AttributeType: S
+        - AttributeName: GSI1
+          AttributeType: S  
+        - AttributeName: GSI2
+          AttributeType: S  
+          
+      KeySchema:
+        - AttributeName: PK
+          KeyType: HASH
+        - AttributeName: SK
+          KeyType: RANGE
+      
+      BillingMode: PAY_PER_REQUEST    
+          
+      ProvisionedThroughput:
+        ReadCapacityUnits: 1
+        WriteCapacityUnits: 1
+        
+      GlobalSecondaryIndexes:
+        - IndexName: GSI1-User-To-Membership-Index
+          KeySchema:
+            - AttributeName: GSI1
+              KeyType: HASH
+            - AttributeName: SK
+              KeyType: RANGE
+ 
+          Projection:
+            ProjectionType: ALL
+          ProvisionedThroughput:
+            ReadCapacityUnits: 1
+            WriteCapacityUnits: 1
+
+        - IndexName: GSI2-User-To-Event-Index
+          KeySchema:
+            - AttributeName: GSI2
+              KeyType: HASH
+            - AttributeName: SK
+              KeyType: RANGE
+ 
+          Projection:
+            ProjectionType: ALL
+          ProvisionedThroughput:
+            ReadCapacityUnits: 1
+            WriteCapacityUnits: 1
+
+      

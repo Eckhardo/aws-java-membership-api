@@ -1,0 +1,41 @@
+hello: 
+  handler: com.serverless.Handler
+  events: 
+    - http: 
+        cors: true
+        method: get
+        path: test
+get-users:
+  handler: com.eki.aws.serverless.GetAllUserHandler
+  description: GET all users
+  events:
+    - http:
+        path: user
+        method: get
+        cors: true
+get-user:
+  handler: com.eki.aws.serverless.domain.user.GetOneUserHandler
+  description: GET user By user name
+  events:
+    - http:
+        path: user/{userName}
+        method: get
+        cors: true
+create-user:
+  handler: com.eki.aws.serverless.domain.user.CreateUserHandler
+  description: POST user
+  events:
+    - http:
+        path: user
+        method: post
+        cors: true
+
+delete-user:
+  handler: com.eki.aws.serverless.domain.user.DeleteUserHandler
+  description: DELETE user by user name
+  events:
+    - http:
+        path: user/{userName}
+        method: delete
+        cors: true
+ 

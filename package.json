@@ -1,0 +1,11 @@
+{
+  "name": "membership-aws-serverless-api",
+  "description": "",
+  "version": "0.1.0",
+  "dependencies": {},
+  "devDependencies": {
+    "serverless": "^1.78.1",
+    "serverless-dynamodb-local": "^0.2.39",
+    "serverless-offline": "^6.5.0"
+  }
+}
