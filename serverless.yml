@@ -1,6 +1,6 @@
 
 
-service: membership-aws-serverless-api
+service: aws-java-membership-api
 
 provider:
   name: aws
@@ -20,10 +20,10 @@ provider:
      Resource: "*"
 custom:
   tableNames:
-    users: 'aige-user'
+    users: 'aige-user-java'
   endpoints:
     dynamodb-url: 'http://localhost:8000'
-  isOffline: true
+  isOffline: false
   dynamodb:
     start:
       migrate: true
@@ -34,7 +34,7 @@ custom:
       domain:
         sources:
           - table: aige-user
-            rawsources: [src/main/resources/user2/testdata.json]
+            rawsources: [src/main/resources/user/testdata.json]
       
 
 package:
