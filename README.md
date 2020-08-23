@@ -1,4 +1,4 @@
-# aws-java-membership-api
+# aws-java-membership-api ( NOT YET DEPLOYED to AWS !!!)
 A  Proof of Concept for Java 8 & AWS Serverless for REST:
 A simple Backend app for CRUD (UserEntity) based on AWS API Gateway, AWS Lambda and DynamodB;
 Infrastructure-as-a-Code is provided by 'The Serverless Framework';
